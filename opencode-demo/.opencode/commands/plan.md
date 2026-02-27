@@ -1,56 +1,56 @@
 ---
-description: Create a detailed implementation plan for complex features
+description: 为复杂功能创建详细的实现计划
 agent: planner
 subtask: true
 ---
 
-# Plan Command
+# 计划命令
 
-Create a detailed implementation plan for: $ARGUMENTS
+为以下功能创建详细的实现计划：$ARGUMENTS
 
-## Your Task
+## 你的任务
 
-1. **Restate Requirements** - Clarify what needs to be built
-2. **Identify Risks** - Surface potential issues, blockers, and dependencies
-3. **Create Step Plan** - Break down implementation into phases
-4. **Wait for Confirmation** - MUST receive user approval before proceeding
+1. **重述需求** - 明确需要构建什么
+2. **识别风险** - 揭示潜在问题、阻塞因素和依赖
+3. **创建分步计划** - 将实现分解为多个阶段
+4. **等待确认** - 必须在继续之前获得用户批准
 
-## Output Format
+## 输出格式
 
-### Requirements Restatement
+### 需求重述
 
-[Clear, concise restatement of what will be built]
+[对将要构建的内容的清晰、简洁的重述]
 
-### Implementation Phases
+### 实现阶段
 
-[Phase 1: Description]
+[阶段 1：描述]
 
-- Step 1.1
-- Step 1.2
+- 步骤 1.1
+- 步骤 1.2
   ...
 
-[Phase 2: Description]
+[阶段 2：描述]
 
-- Step 2.1
-- Step 2.2
+- 步骤 2.1
+- 步骤 2.2
   ...
 
-### Dependencies
+### 依赖
 
-[List external dependencies, APIs, services needed]
+[所需的外部依赖、API、服务列表]
 
-### Risks
+### 风险
 
-- HIGH: [Critical risks that could block implementation]
-- MEDIUM: [Moderate risks to address]
-- LOW: [Minor concerns]
+- 高：[可能阻碍实现的关键风险]
+- 中：[需要解决的适度风险]
+- 低：[次要问题]
 
-### Estimated Complexity
+### 预估复杂度
 
-[HIGH/MEDIUM/LOW with time estimates]
+[高/中/低]
 
-**WAITING FOR CONFIRMATION**: Proceed with this plan? (yes/no/modify)
+**等待确认**：是否继续此计划？（是/否/修改）
 
 ---
 
-**CRITICAL**: Do NOT write any code until the user explicitly confirms with "yes", "proceed", or similar affirmative response.
+**关键**：在用户明确使用"是"、"继续"或类似的肯定响应确认之前，不要编写任何代码。

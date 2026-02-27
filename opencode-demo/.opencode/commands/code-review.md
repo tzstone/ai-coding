@@ -1,68 +1,72 @@
 ---
-description: Review code for quality, security, and maintainability
+description: 审查代码的质量、安全性和可维护性
 agent: code-reviewer
 subtask: true
 ---
 
-# Code Review Command
+# 代码审查命令
 
-Review code changes for quality, security, and maintainability: $ARGUMENTS
+审查代码变更的质量、安全性和可维护性：$ARGUMENTS
 
-## Your Task
+## 你的任务
 
-1. **Get changed files**: Run `git diff --name-only HEAD`
-2. **Analyze each file** for issues
-3. **Generate structured report**
-4. **Provide actionable recommendations**
+1. **获取变更的文件**：运行 `git diff --name-only HEAD`
+2. **分析每个文件**的问题
+3. **生成结构化报告**
+4. **提供可操作的建议**
 
-## Check Categories
+## 检查类别
 
-### Security Issues (CRITICAL)
-- [ ] Hardcoded credentials, API keys, tokens
-- [ ] SQL injection vulnerabilities
-- [ ] XSS vulnerabilities
-- [ ] Missing input validation
-- [ ] Insecure dependencies
-- [ ] Path traversal risks
-- [ ] Authentication/authorization flaws
+### 安全问题（关键）
 
-### Code Quality (HIGH)
-- [ ] Functions > 50 lines
-- [ ] Files > 800 lines
-- [ ] Nesting depth > 4 levels
-- [ ] Missing error handling
-- [ ] console.log statements
-- [ ] TODO/FIXME comments
-- [ ] Missing JSDoc for public APIs
+- [ ] 硬编码凭据、API 密钥、令牌
+- [ ] SQL 注入漏洞
+- [ ] XSS 漏洞
+- [ ] 缺少输入验证
+- [ ] 不安全的依赖
+- [ ] 路径遍历风险
+- [ ] 认证/授权缺陷
 
-### Best Practices (MEDIUM)
-- [ ] Mutation patterns (use immutable instead)
-- [ ] Unnecessary complexity
-- [ ] Missing tests for new code
-- [ ] Accessibility issues (a11y)
-- [ ] Performance concerns
+### 代码质量（高）
 
-### Style (LOW)
-- [ ] Inconsistent naming
-- [ ] Missing type annotations
-- [ ] Formatting issues
+- [ ] 函数超过 50 行
+- [ ] 文件超过 800 行
+- [ ] 嵌套深度超过 4 层
+- [ ] 缺少错误处理
+- [ ] console.log 语句
+- [ ] TODO/FIXME 注释
+- [ ] 公共 API 缺少 JSDoc
 
-## Report Format
+### 最佳实践（中）
 
-For each issue found:
+- [ ] 可变模式（使用不可变代替）
+- [ ] 不必要的复杂性
+- [ ] 新代码缺少测试
+- [ ] 无障碍问题（a11y）
+- [ ] 性能问题
+
+### 风格（低）
+
+- [ ] 命名不一致
+- [ ] 缺少类型注解
+- [ ] 格式问题
+
+## 报告格式
+
+对于每个发现的问题：
 
 ```
-**[SEVERITY]** file.ts:123
-Issue: [Description]
-Fix: [How to fix]
+**[严重程度]** file.ts:123
+问题：[描述]
+修复：[如何修复]
 ```
 
-## Decision
+## 决策
 
-- **CRITICAL or HIGH issues**: Block commit, require fixes
-- **MEDIUM issues**: Recommend fixes before merge
-- **LOW issues**: Optional improvements
+- **关键或高严重性问题**：阻止提交，要求修复
+- **中严重性问题**：建议合并前修复
+- **低严重性问题**：可选改进
 
 ---
 
-**IMPORTANT**: Never approve code with security vulnerabilities!
+**重要**：永远不要批准有安全漏洞的代码！

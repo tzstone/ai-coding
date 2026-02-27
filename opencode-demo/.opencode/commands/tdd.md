@@ -1,66 +1,71 @@
 ---
-description: Enforce TDD workflow with 80%+ coverage
+description: 强制执行 TDD 工作流，确保 80%+ 测试覆盖率
 agent: tdd-guide
 subtask: true
 ---
 
-# TDD Command
+# TDD 命令
 
-Implement the following using strict test-driven development: $ARGUMENTS
+使用严格的测试驱动开发来实现：$ARGUMENTS
 
-## TDD Cycle (MANDATORY)
+## TDD 循环（必须）
 
 ```
 RED → GREEN → REFACTOR → REPEAT
 ```
 
-1. **RED**: Write a failing test FIRST
-2. **GREEN**: Write minimal code to pass the test
-3. **REFACTOR**: Improve code while keeping tests green
-4. **REPEAT**: Continue until feature complete
+1. **RED**：先编写一个失败的测试
+2. **GREEN**：编写最少代码使测试通过
+3. **REFACTOR**：在保持测试通过的同时重构代码
+4. **REPEAT**：继续直到功能完成
 
-## Your Task
+## 你的任务
 
-### Step 1: Define Interfaces (SCAFFOLD)
-- Define TypeScript interfaces for inputs/outputs
-- Create function signature with `throw new Error('Not implemented')`
+### 步骤 1：定义接口（脚手架）
 
-### Step 2: Write Failing Tests (RED)
-- Write tests that exercise the interface
-- Include happy path, edge cases, and error conditions
-- Run tests - verify they FAIL
+- 定义输入/输出的 TypeScript 接口
+- 创建函数签名，使用 `throw new Error('Not implemented')`
 
-### Step 3: Implement Minimal Code (GREEN)
-- Write just enough code to make tests pass
-- No premature optimization
-- Run tests - verify they PASS
+### 步骤 2：编写失败的测试（RED）
 
-### Step 4: Refactor (IMPROVE)
-- Extract constants, improve naming
-- Remove duplication
-- Run tests - verify they still PASS
+- 编写测试来验证接口
+- 包括正常路径、边界情况和错误条件
+- 运行测试 - 确认它们失败
 
-### Step 5: Check Coverage
-- Target: 80% minimum
-- 100% for critical business logic
-- Add more tests if needed
+### 步骤 3：实现最小代码（GREEN）
 
-## Coverage Requirements
+- 编写刚好足够的代码使测试通过
+- 不要过早优化
+- 运行测试 - 确认它们通过
 
-| Code Type | Minimum |
-|-----------|---------|
-| Standard code | 80% |
-| Financial calculations | 100% |
-| Authentication logic | 100% |
-| Security-critical code | 100% |
+### 步骤 4：重构（改进）
 
-## Test Types to Include
+- 提取常量，改进命名
+- 删除重复代码
+- 运行测试 - 确认它们仍然通过
 
-- **Unit Tests**: Individual functions
-- **Edge Cases**: Empty, null, max values, boundaries
-- **Error Conditions**: Invalid inputs, network failures
-- **Integration Tests**: API endpoints, database operations
+### 步骤 5：检查覆盖率
+
+- 目标：最低 80%
+- 核心业务逻辑 100%
+- 如需要，添加更多测试
+
+## 覆盖率要求
+
+| 代码类型     | 最低要求 |
+| ------------ | -------- |
+| 标准代码     | 80%      |
+| 金融计算     | 100%     |
+| 认证逻辑     | 100%     |
+| 安全关键代码 | 100%     |
+
+## 需要包含的测试类型
+
+- **单元测试**：单个函数
+- **边界情况**：空值、null、最大值、边界值
+- **错误条件**：无效输入、网络故障
+- **集成测试**：API 端点、数据库操作
 
 ---
 
-**MANDATORY**: Tests must be written BEFORE implementation. Never skip the RED phase.
+**必须**：必须在实现之前编写测试。永远不要跳过 RED 阶段。
