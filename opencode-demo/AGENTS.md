@@ -122,3 +122,7 @@ Run `vue-tsc` before committing for `.vue` files. The project uses project refer
 - Use Vue's error boundaries where appropriate
 - Prefer explicit error messages over generic ones
 - Log errors to console during development
+
+## 强制要求
+
+- 永远使用中文回答
